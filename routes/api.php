@@ -13,4 +13,5 @@ Route::controller(CategoryController::class)->group(function (){
     Route::get('/categories','index');
     Route::post('/category','store');
     Route::get('/delete-category/{id}','destroy');
+    Route::get('/category/{id}','update');
 });
