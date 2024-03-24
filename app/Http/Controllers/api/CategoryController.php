@@ -67,4 +67,35 @@ class CategoryController extends Controller
             return $this->ApiResponseFaild("faild", $e->getMessage(), 500);
         }
     }
+
+    public function update(Request $request, $id)
+    {
+        try {
+            $validate = Validator::make($request->all(), [
+                'category_nameAr' => 'required|max:255',
+                'category_nameEn' => 'required|max:255',
+                'category_image' => 'required|mimes:png,jpg,jpeg,gif|max:204800'
+            ]);
+            if (!$validate->fails()) {
+                $category = Category::find($id);
+                if ($category) {
+
+                    $formData = $request->all();
+                    if ($request->hasFile('category_image')) {
+                        $this->deleteFile('images/category/' . $category->category_image);
+                        $path = $this->uploadImage($request, 'category_image', 'category');
+                        $formData['category_image'] = $path;
+                    }
+                    $category->update($formData);
+                    return $this->ApiResponseSuccess($category, "success", 200);
+                } else {
+                    return $this->ApiResponseFaild("faild", "no data found", 400);
+                }
+            } else {
+                return $this->ApiResponseFaild('faild', $validate->errors(), 500);
+            }
+        } catch (Exception $e) {
+            return $this->ApiResponseFaild("faild", $e->getMessage(), 500);
+        }
+    }
 }

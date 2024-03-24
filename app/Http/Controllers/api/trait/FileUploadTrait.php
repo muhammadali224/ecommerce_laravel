@@ -21,6 +21,6 @@ trait FileUploadTrait
     public function deleteFile($path, $disk = 'api')
     {
         Storage::disk($disk)->delete($path);
-        //    return response()->json([$path]);
+        
     }
 }
