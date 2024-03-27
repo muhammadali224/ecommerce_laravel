@@ -26,9 +26,3 @@ Route::controller(BranchController::class)->group(function () {
     Route::get('/delete-branch/{id}', 'destroy');
     Route::post('/branch/{id}', 'update');
 });
-Route::controller(BranchDeliveryController::class)->group(function () {
-    Route::get('/branchDelivery', 'index');
-    Route::post('/branchDelivery', 'store');
-    Route::get('/delete-branchDelivery/{id}', 'destroy');
-    Route::post('/branchDelivery/{id}', 'update');
-});

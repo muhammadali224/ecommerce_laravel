@@ -19,13 +19,8 @@ class Branch extends Model
         'facebookUrl',
         'instagramUrl',
     ];
-    public function deliveryPlans()
+    public function deliveryPlan()
     {
-        return $this->belongsToMany(BranchDelivery::class)->withPivot('active');
-    }
-
-    public function activeDeliveryPlan()
-    {
-        return $this->belongsToMany(BranchDelivery::class)->wherePivot('active', true);
+        return $this->belongsTo(DeliveryPlan::class);
     }
 }

@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('phone2');
             $table->string('facebookUrl');
             $table->string('instagramUrl')->nullable();
+            $table->foreignId('delivery_plans')->constrained();
             $table->timestamps();
         });
     }
