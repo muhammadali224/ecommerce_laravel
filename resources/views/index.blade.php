@@ -1,7 +1,4 @@
 @extends('layouts.master')
-@section('title')
-الرئيسية - لوحة التحكم 
-@stop
 @section('css')
 <!--  Owl-carousel css-->
 <link href="{{URL::asset('assets/plugins/owl-carousel/owl.carousel.css')}}" rel="stylesheet" />
