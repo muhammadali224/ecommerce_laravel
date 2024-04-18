@@ -23,7 +23,6 @@ return new class extends Migration
             $table->integer('count')->default(0);
             $table->integer('max_count')->default(100);
             $table->boolean('isActive')->default(false);
-            
             $table->double('price')->default(0.0);
             $table->double('discount')->default(0.0);
 
