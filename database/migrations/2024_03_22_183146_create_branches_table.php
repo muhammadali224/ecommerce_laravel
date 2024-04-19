@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('branches', function (Blueprint $table) {
             $table->id();
-            $table->string('nameAr');
-            $table->string('nameEn');
-            $table->boolean('isOpen');
+            $table->string('name_ar');
+            $table->string('name_en');
+            $table->boolean('is_open');
             $table->double('lang');
             $table->double('late');
             $table->string('phone1');
             $table->string('phone2');
-            $table->string('facebookUrl');
-            $table->string('instagramUrl')->nullable();
+            $table->string('facebook_url');
+            $table->string('instagram_url')->nullable();
             $table->foreignId('delivery_plans')->constrained();
             $table->timestamps();
         });

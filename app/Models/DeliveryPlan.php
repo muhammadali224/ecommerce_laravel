@@ -14,7 +14,7 @@ class DeliveryPlan extends Model
         'base_price',
         'charge',
         'isFixed',
-        'fix_charg',
+        'fix_charge',
         'fix_zone',
         'max_zone',
     ];

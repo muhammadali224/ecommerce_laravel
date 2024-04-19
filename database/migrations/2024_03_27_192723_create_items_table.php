@@ -13,16 +13,16 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->string('nameAr');
-            $table->string('nameEn');
-            $table->string('descriptionAr');
-            $table->string('descriptionEn');
+            $table->string('name_ar');
+            $table->string('name_en');
+            $table->string('description_ar');
+            $table->string('description_en');
             $table->foreignId('category_id')->constrained();
             $table->foreignId('sub_category_id')->constrained();
             $table->foreignId('branch_id')->constrained();
             $table->integer('count')->default(0);
             $table->integer('max_count')->default(100);
-            $table->boolean('isActive')->default(false);
+            $table->boolean('is_active')->default(false);
             $table->double('price')->default(0.0);
             $table->double('discount')->default(0.0);
 

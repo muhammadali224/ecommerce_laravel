@@ -118,9 +118,9 @@
                         </g>
                     </svg><span class="side-menu__label">الإعدادات</span><i class="angle fe fe-chevron-down"></i></a>
                 <ul class="slide-menu">
+                    <li><a class="slide-item" href="{{ url('/' . ($page = 'delivery_plans')) }}">خطط التوصيل</a></li>
+                    <li><a class="slide-item" href="{{ url('/' . ($page = 'branches')) }}">الفروع</a></li>
                     <li><a class="slide-item" href="{{ url('/' . ($page = 'categories')) }}">التصنيفات</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . ($page = 'departments')) }}">الأقسام</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . ($page = 'subDepartments')) }}"> الخدمات</a></li>
 
                 </ul>
             </li>

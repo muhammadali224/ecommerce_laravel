@@ -17,8 +17,8 @@ return new class extends Migration
             $table->double('base_price');
             $table->double('charge');
             $table->boolean('isFixed');
-            $table->double('fix_charge');
-            $table->double('fix_zone');
+            $table->double('fix_charge')->nullable();
+            $table->double('fix_zone')->nullable();
             $table->double('max_zone');
             $table->timestamps();
         });
